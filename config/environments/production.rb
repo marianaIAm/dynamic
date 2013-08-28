@@ -4,6 +4,9 @@ Dynamic::Application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  # Add for Devise Authentication
+  config.action_mailer.default_url_options = { :host => 'heroku' }
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.
