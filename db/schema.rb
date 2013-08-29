@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20130829015808) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type"
   end
 
   add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true, using: :btree
@@ -37,6 +36,7 @@ ActiveRecord::Schema.define(version: 20130829015808) do
 
   create_table "clients", force: true do |t|
     t.integer  "account_id"
+    t.integer  "trainer_id"
     t.string   "name_first"
     t.string   "name_last"
     t.string   "phone"

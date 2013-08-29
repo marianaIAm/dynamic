@@ -10,8 +10,8 @@
 Account.destroy_all
 accounts = Account.create([
   {
-    email: "b@d.com",
-    password: "bbbbbbbb"
+    email: "gabby@doggy.com",
+    password: "gabbydoggy"
   },
   {
     email: "bella@doggy.com",
@@ -24,13 +24,37 @@ accounts = Account.create([
   {
     email: "annie@doggy.com",
     password: "anniedoggy"
+  },
+  {
+    email: "client1@test.com",
+    password: "clientone"
+  },
+  {
+    email: "client2@test.com",
+    password: "clienttwo"
+  },
+  {
+    email: "client3@test.com",
+    password: "clientthree"
+  },
+  {
+    email: "client4@test.com",
+    password: "clientfour"
   }
 ])
 
 Trainer.destroy_all
 trainers = [
-  Trainer.create(name_last: "Dog", name_first: "B", phone: "310-111-1111", account_id: accounts[0].id),
+  Trainer.create(name_last: "Doggy", name_first: "Gabby", phone: "310-111-1111", account_id: accounts[0].id),
   Trainer.create(name_last: "Doggy", name_first: "Bella", phone: "310-222-2222", account_id: accounts[1].id),
   Trainer.create(name_last: "Doggy", name_first: "Lucy", phone: "310-333-3333", account_id: accounts[2].id),
   Trainer.create(name_last: "Doggy", name_first: "Annie", phone: "310-444-4444", account_id: accounts[3].id)
+]
+
+Client.destroy_all
+clients = [
+  Client.create(name_last: "Client1Last", name_first: "Client1First", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id),
+  Client.create(name_last: "Client2Last", name_first: "Client2First", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id),
+  Client.create(name_last: "Client3Last", name_first: "Client3First", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[1].id),
+  Client.create(name_last: "Client4Last", name_first: "Client4First", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[1].id)
 ]
