@@ -42,13 +42,13 @@ header {
   padding-right: 5%;
 }
 
-#trainer-ctrl {
+#trainer-ctrl, #client-ctrl {
   float: left;
   width: 90%;
   border: 1px solid black;
 }
 
-#trainer-list-container {
+#trainer-list-container, #client-list-container {
   background-color: #fff;
   min-height: 500px;
   float: left;
@@ -78,7 +78,7 @@ header {
   }
 }
 
-#trainer-view-container {
+#trainer-view-container, #client-view-container {
   border-left: 1px solid #d0d0d0;
   float: left;
   width: 60%;

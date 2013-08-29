@@ -1,5 +1,5 @@
-<div ng-controller="TrainersCtrl">
-  <div id="trainer-list-container">
+<div ng-controller="ClientsCtrl">
+  <!-- <div id="trainer-list-container">
     <ul>
       <li ng-repeat="trainer in trainers"
            ng-click="showTrainer(trainer, $index)">
@@ -11,5 +11,18 @@
   <div id="trainer-view-container" ng-show="selectedTrainer">
     <h2>Name: {{selectedTrainer.name_first}} {{selectedTrainer.name_last}}</h2>
     <p>Phone: {{selectedTrainer.phone}}</p>
+  </div> -->
+  <div id="client-list-container">
+    <ul>
+      <li ng-repeat="client in clients"
+           ng-click="showClient(client, $index)">
+        <h3 ng-class="{active: $index == selectedRow}">{{client.name_first}}  {{client.name_last}} </h3>
+      </li>
+    </ul>
+  </div>
+
+  <div id="client-view-container" ng-show="selectedClient">
+    <h2>Name: {{selectedClient.name_first}} {{selectedClient.name_last}}</h2>
+    <p>Phone: {{selectedClient.phone}}</p>
   </div>
 </div>

@@ -53,8 +53,8 @@ trainers = [
 
 Client.destroy_all
 clients = [
-  Client.create(name_last: "Client1Last", name_first: "Client1First", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id),
-  Client.create(name_last: "Client2Last", name_first: "Client2First", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id),
-  Client.create(name_last: "Client3Last", name_first: "Client3First", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[1].id),
-  Client.create(name_last: "Client4Last", name_first: "Client4First", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[1].id)
+  Client.create(name_last: "Lasty", name_first: "Firsty", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id),
+  Client.create(name_last: "Smith", name_first: "Mary", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id),
+  Client.create(name_last: "Smith", name_first: "Bob", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[1].id),
+  Client.create(name_last: "James", name_first: "Taylor", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[1].id)
 ]

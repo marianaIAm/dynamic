@@ -13,6 +13,8 @@ Dynamic::Application.routes.draw do
   scope :api do
     get "/trainers(.:format)" => "trainers#index"
     get "/trainers/:id(.:format)" => "trainers#show"
+    get "/clients(.:format)" => "clients#index"
+    get "/clients/:id(.:format)" => "clients#show"
   end
 
   # Example of regular route:
