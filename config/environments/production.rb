@@ -5,7 +5,7 @@ Dynamic::Application.configure do
   config.cache_classes = true
 
   # Add for Devise Authentication
-  config.action_mailer.default_url_options = { :host => 'heroku' }
+  config.action_mailer.default_url_options = { :host => 'dynamicbuild.heroku.com' }
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
