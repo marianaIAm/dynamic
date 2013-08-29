@@ -1,1 +1,15 @@
-<h1>Welcome to Dynamic Build - Home#Index</h1>
+<div ng-controller="TrainersCtrl">
+  <div id="trainer-list-container">
+    <ul>
+      <li ng-repeat="trainer in trainers"
+           ng-click="showTrainer(trainer, $index)">
+        <h3 ng-class="{active: $index == selectedRow}">{{trainer.name_first}}  {{trainer.name_last}} </h3>
+      </li>
+    </ul>
+  </div>
+
+  <div id="trainer-view-container" ng-show="selectedTrainer">
+    <h2>Name: {{selectedTrainer.name_first}} {{selectedTrainer.name_last}}</h2>
+    <p>Phone: {{selectedTrainer.phone}}</p>
+  </div>
+</div>

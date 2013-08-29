@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="DynamicBuild">
 <head>
   <title>Dynamic Build</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <h1>Dynamic Build</h1>
-    <% if account_signed_in? %>
-      Logged in as <strong><%= current_account.email %></strong>.
-      <%= link_to 'Edit profile', edit_account_registration_path %> |
-      <%= link_to "Logout", destroy_account_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_account_registration_path %> |
-      <%= link_to "Login", new_account_session_path %>
-    <% end %>
+  <header class="clearfix">
+    <h1 id="logo">Dynamic Build</h1>
+    <div id="login">
+      <% if account_signed_in? %>
+        Logged in as <strong><%= current_account.email %></strong>.
+        <%= link_to 'Edit profile', edit_account_registration_path %> |
+        <%= link_to "Logout", destroy_account_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign up", new_account_registration_path %> |
+        <%= link_to "Login", new_account_session_path %>
+      <% end %>
 
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <% end %>
+    </div>
   </header>
+   <div id="content" class="clearfix">
 
 <%= yield %>
+
+  </div>
+  <footer>
+    <p class="madein">Made with <%= image_tag("love.png", :alt => "love") %> in Santa Monica, CA</p>
+    <p class="copyright">Copyright © 2013 Mariana Lenetis</p>
+  </footer>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+<%= javascript_include_tag "application" %>
 
 </body>
 </html>
