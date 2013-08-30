@@ -1,4 +1,6 @@
-function ClientsCtrl ($scope) {
+function ClientsCtrl ($scope, Client) {
+
+  $scope.clients = Client.query();
 
   $scope.setActive('clients');
 
