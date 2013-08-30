@@ -1,28 +1,17 @@
-<div ng-controller="ClientsCtrl">
-  <!-- <div id="trainer-list-container">
-    <ul>
-      <li ng-repeat="trainer in trainers"
-           ng-click="showTrainer(trainer, $index)">
-        <h3 ng-class="{active: $index == selectedRow}">{{trainer.name_first}}  {{trainer.name_last}} </h3>
+<div class="container" ng-controller="AppCtrl">
+  <h1>Clients</h1>
+  <ul class="nav nav-pills">
+      <li ng-class="clientsActive">
+        <a href="#">Clients</a>
       </li>
-    </ul>
-  </div>
-
-  <div id="trainer-view-container" ng-show="selectedTrainer">
-    <h2>Name: {{selectedTrainer.name_first}} {{selectedTrainer.name_last}}</h2>
-    <p>Phone: {{selectedTrainer.phone}}</p>
-  </div> -->
-  <div id="client-list-container">
-    <ul>
-      <li ng-repeat="client in clients"
-           ng-click="showClient(client, $index)">
-        <h3 ng-class="{active: $index == selectedRow}">{{client.name_first}}  {{client.name_last}} </h3>
+      <li ng-class="workoutsActive">
+        <a href="#/workouts">Workouts</a>
       </li>
-    </ul>
-  </div>
+      <li ng-class="exercisesActive">
+        <a href="#/exercises">Exercises</a>
+      </li>
+  </ul>
+  <div ng-view></div>
+ </div>
 
-  <div id="client-view-container" ng-show="selectedClient">
-    <h2>Name: {{selectedClient.name_first}} {{selectedClient.name_last}}</h2>
-    <p>Phone: {{selectedClient.phone}}</p>
-  </div>
-</div>
+

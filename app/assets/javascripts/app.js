@@ -1,1 +1,12 @@
-window.App = angular.module('DynamicBuild', ['ngResource'])
+angular.module('dynamicBuild', ['ui.bootstrap'])
+  .config(clientRouter);
+
+function clientRouter ($routeProvider) {
+  $routeProvider
+    .when('/', {templateUrl: 'partials/client_details.html',
+      controller: 'ClientsCtrl'})
+    .when('/workouts', {template: '<h3>Workouts</h3> {{clients | json}}',
+      controller: 'WorkoutsCtrl'})
+    .when('/exercises', {template: '<h3>Exercises</h3> {{clients | json}}',
+      controller: 'ExercisesCtrl'});
+}

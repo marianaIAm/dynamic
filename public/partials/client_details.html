@@ -1,0 +1,15 @@
+<div>
+  <h3>Clients</h3>
+<ul ng-repeat="client in clients">
+  <li><a href="" ng-click="setClient(client.id)">{{client.name_first}} {{client.name_last}}</a></li>
+</ul>
+ <div ng-show="currentClient">
+  <p>Client: {{currentClient.name_first}} {{currentClient.name_last}} </p>
+</div>
+<div>
+<ul>
+  <li ng-repeat="workout in currentClient.workouts">
+    <a ng-href="#/clients/{{workout}}">{{workout}}</a>
+  </li>
+</ul>
+</div>
