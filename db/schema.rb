@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130830185115) do
+ActiveRecord::Schema.define(version: 20130831063454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,11 +44,6 @@ ActiveRecord::Schema.define(version: 20130830185115) do
     t.datetime "updated_at"
   end
 
-  create_table "clients_workouts", id: false, force: true do |t|
-    t.integer "client_id",  null: false
-    t.integer "workout_id", null: false
-  end
-
   create_table "exercises", force: true do |t|
     t.string   "title"
     t.string   "description"
@@ -57,10 +52,25 @@ ActiveRecord::Schema.define(version: 20130830185115) do
     t.datetime "updated_at"
   end
 
-  create_table "exercises_workouts", id: false, force: true do |t|
-    t.integer "workout_id",  null: false
-    t.integer "exercise_id", null: false
+  create_table "programs", force: true do |t|
+    t.integer  "client_id",  null: false
+    t.integer  "workout_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "programs", ["client_id"], name: "index_programs_on_client_id", using: :btree
+  add_index "programs", ["workout_id"], name: "index_programs_on_workout_id", using: :btree
+
+  create_table "routines", force: true do |t|
+    t.integer  "exercise_id", null: false
+    t.integer  "workout_id",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "routines", ["exercise_id"], name: "index_routines_on_exercise_id", using: :btree
+  add_index "routines", ["workout_id"], name: "index_routines_on_workout_id", using: :btree
 
   create_table "trainers", force: true do |t|
     t.integer  "account_id"

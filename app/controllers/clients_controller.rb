@@ -1,4 +1,5 @@
 class ClientsController < ApplicationController
+  require 'json'
   # GET /clients
   # GET /clients.json
   def index
@@ -9,6 +10,11 @@ class ClientsController < ApplicationController
   # GET /clients/:id
   # GET /clients/:id.json
   def show
-    render json: Client.find(params[:id])
+
+    @client =  Client.find(params[:id])
+    clients_workouts = @client.workouts.select('workouts.*, programs.client_id').group_by(&:client_id)
+
+    render json: clients_workouts
+
   end
 end
