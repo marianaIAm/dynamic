@@ -79,13 +79,18 @@ exercises = [
 ]
 
 # Seed with client assigned each workout belonging to their trainer
-clients.each do |client|
-  workouts.each do |workout|
-    if client.trainer_id == workout.trainer_id
-      client.workouts << workout
-    end
-  end
-end
+# clients.each do |client|
+#   workouts.each do |workout|
+#     if client.trainer_id == workout.trainer_id
+#       client.workouts << workout
+#     end
+#   end
+# end
+
+clients[0].workouts << workouts[0]
+clients[1].workouts << workouts[1]
+clients[2].workouts << workouts[2]
+clients[3].workouts << workouts[3]
 
 # Seed all workouts with all exercises
 workouts.each do |workout|

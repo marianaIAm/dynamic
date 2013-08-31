@@ -9,12 +9,20 @@ require 'spec_helper'
 feature "trainer sees clients after login", js: true  do
   context "successful" do
     scenario "logging in" do
-      visit '/home/index'
+      visit '/'
 
-      click_link 'login'
+      click_link 'Login'
 
-      expect(page).to have_content 'email'
-      expect(page).to have_content 'password'
+      expect(page).to have_content 'Email'
+      expect(page).to have_content 'Password'
+
+      fill_in 'Email', with: 'bella@doggy.com'
+      fill_in 'Password', with: 'belladoggy'
+
+      click_button 'Sign in'
+
+      expect(current_path).to eql '/'
+      expect(page).to have_content 'Bob Smith'
     end
   end
 end
