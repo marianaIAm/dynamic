@@ -12,9 +12,9 @@ class ClientsController < ApplicationController
   def show
 
     @client =  Client.find(params[:id])
-    clients_workouts = @client.workouts.select('workouts.*, programs.client_id').group_by(&:client_id)
+    render json: @client.to_json(include: { workouts: { include: :exercises } })
 
-    render json: clients_workouts
-
+    # clients_workouts = @client.workouts.select('workouts.*, programs.client_id').group_by(&:client_id)
+    # render json: clients_workouts
   end
 end
