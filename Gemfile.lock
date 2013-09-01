@@ -49,6 +49,7 @@ GEM
     execjs (2.0.1)
     ffi (1.9.0)
     hike (1.2.3)
+    hirb (0.7.1)
     i18n (0.6.5)
     jbuilder (1.5.1)
       activesupport (>= 3.0.0)
@@ -152,6 +153,7 @@ DEPENDENCIES
   database_cleaner
   devise
   dotenv
+  hirb
   jbuilder (~> 1.2)
   jquery-rails
   pg
