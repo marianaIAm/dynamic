@@ -1,4 +1,4 @@
 angular.module('clientServices', ['ngResource'])
   .factory('Client', function ($resource) {
-    return $resource('/api/clients.json');
+    return $resource('/api/clients/:clientId');
   });

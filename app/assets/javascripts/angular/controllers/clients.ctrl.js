@@ -1,4 +1,4 @@
-function ClientsCtrl ($scope, Client) {
+function ClientsCtrl ($scope, $routeParams, Client) {
 
   $scope.clients = Client.query();
 
@@ -7,6 +7,7 @@ function ClientsCtrl ($scope, Client) {
   $scope.currentClient = null;
 
   $scope.setClient = function (id) {
-    $scope.currentClient = $scope.clients[id];
+   // $scope.currentClient = $scope.clients[id];
+   $scope.currentClient = Client.get({clientId: id});
   };
 }
