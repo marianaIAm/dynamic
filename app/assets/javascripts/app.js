@@ -1,4 +1,5 @@
-angular.module('dynamicBuild', ['clientServices', 'ui.bootstrap'])
+// angular.module('dynamicBuild', ['clientServices', 'ui.bootstrap'])
+angular.module('dynamicBuild', ['clientServices'])
   .config(clientRouter);
 
 function clientRouter ($routeProvider) {

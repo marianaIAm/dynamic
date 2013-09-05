@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'devise'
 
+# Dotenv loads environment variables from .env into ENV.
 gem 'dotenv'
 
 # Use SCSS for stylesheets
