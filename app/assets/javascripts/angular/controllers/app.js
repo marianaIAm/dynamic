@@ -1,7 +1,7 @@
 function AppCtrl ($scope) {
   $scope.setActive = function (type) {
     $scope.clientsActive = '';
-    $scope.workoutsActive = '';
+    $scope.trainersActive = '';
     $scope.exercisesActive = '';
 
     $scope[type + 'Active'] = 'active';

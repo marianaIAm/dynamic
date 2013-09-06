@@ -8,10 +8,11 @@ function ClientsCtrl ($scope, $routeParams, Client) {
 
   $scope.setClient = function (id) {
    $scope.currentClient = Client.get({clientId: id});
-   $scope.currentWorkout = null;
+   // $scope.currentWorkout = null;
+   $scope.currentWorkouts = $scope.currentClient.workouts;
   };
 
-  $scope.setCurrentClientWorkout = function (id) {
-    $scope.currentClientWorkout = $scope.currentClient.workouts[id];
-  };
+  // $scope.setCurrentClientWorkout = function (id) {
+  //   $scope.currentClientWorkout = $scope.currentClient.workouts[id];
+  // };
 }

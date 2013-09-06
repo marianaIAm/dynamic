@@ -5,13 +5,33 @@
    height: 0;
    clear: both;
 }
-
 /***** Mobile First - default is phone ***/
+
+
 
 body {
   font-size: 12px;
   font-family: Helvetica, sans-serif;
   margin: 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 96%;
+  margin: 0 2%;
+}
+
+.column3 {
+  padding: 10px 0;
+  border-bottom: 1px solid #CCC;
+}
+
+.image, .copy {
+  text-align: center;
 }
 
 #wrapper {
@@ -49,50 +69,6 @@ header {
   padding-right: 5%;
 }
 
-#trainer-ctrl, #client-ctrl {
-  float: left;
-  width: 90%;
-  border: 1px solid black;
-}
-
-#trainer-list-container, #client-list-container {
-  background-color: #fff;
-  min-height: 500px;
-  float: left;
-  width: 30%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  ul {
-    margin: 0px;
-    list-style: none;
-    padding: 0px;
-    li {
-      cursor: pointer;
-      border-bottom: 1px solid #ddd;
-      padding: 0 10px;
-    }
-  }
-  h3 {
-    font-size: 14px;
-    small {
-      font-size: 12px;
-      color: #ccc;
-      font-weight: normal;
-    }
-    &.active {
-      color: red;
-    }
-  }
-}
-
-.trainer-view-container, .client-view-container {
-  border-left: 1px solid #d0d0d0;
-  float: left;
-  width: 20%;
-  min-height: 500px;
-  padding-left: 4%;
-}
-
 a:link, a:visited {
   text-decoration: none;
   color: black;
@@ -111,27 +87,60 @@ footer .copyright {
 }
 
 /***** BEGIN MEDIA QUERIES *****/
+/* large desktop and tv's */
+@media (min-width: 1024px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    &:after {
+      content: "";
+      clear: both;
+      width: 100%;
+    }
+  }
+  .column3 {
+    width: 300px;
+    float: left;
+    margin: 0 10px;
+  }
+  .image {
+    text-align: center;
+  }
+}
 
 /* tablet */
-@media screen and (min-width: 601px) and (max-width: 799px) {
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container {
+    width: 96%;
+    margin: 0 2%;
+  }
+  .column3 {
+    clear: both;
+    padding: 20px 0;
+    border-bottom: 1px solid #CCC;
+    &:after {
+      content: "";
+      clear: both;
+      width: 100%;
+    }
+  }
+  .image {
+    float: left;
+    width: 40%;
+  }
+  .copy {
+    float: right;
+    width: 56%;
+  }
 
   footer .copyright {
-     float: left;
-     padding-left: 3%;
+   float: left;
+   padding-left: 3%;
   }
 
   footer .madein {
-     float: left;
-     padding-left: 3%;
-  }
-
-}
-
-/* large desktop and browsers */
-@media (min-width: 800px) {
-  #wrapper {
-    max-width: 1100px;
+    float: left;
+    padding-left: 3%;
   }
 }
-
 
