@@ -7,8 +7,6 @@
 }
 /***** Mobile First - default is phone ***/
 
-
-
 body {
   font-size: 12px;
   font-family: Helvetica, sans-serif;
@@ -21,8 +19,8 @@ img {
 }
 
 .container {
-  width: 96%;
-  margin: 0 2%;
+  width: 100%;
+  margin: 0 0;
 }
 
 .column3 {
@@ -40,7 +38,7 @@ img {
 }
 
 #content {
-  padding-left: 15px;
+  /*padding-left: 15px;*/
   margin-bottom: 10px;
   min-height: 300px;
   border-bottom: 2px solid #2980b9;
@@ -72,6 +70,52 @@ header {
 a:link, a:visited {
   text-decoration: none;
   color: black;
+}
+
+.workout_toggle, .client_toggle, .client_profile {
+  font: 1.4em Verdana;
+  padding: 3% 0 3% 3%;
+  color: #fff;
+  background-color: #2ecc71;
+  border-top: 2px solid #3498db;
+}
+
+p {
+  padding-left: 3%;
+}
+
+.client_details {
+  width: 50%;
+  float: left;
+}
+
+.client_details p {
+  padding-left: 25%;
+}
+
+.client_profile {
+  background-color: #fff;
+  color: #2ecc71;
+}
+
+/*.current_client {
+  border: 2px solid #3498db;
+}
+*/
+.list_button {
+  padding: 2% 2% 2% 2%;
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #3498db;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin-bottom: 10px;
 }
 
 footer .madein {
@@ -111,8 +155,8 @@ footer .copyright {
 /* tablet */
 @media (min-width: 600px) and (max-width: 1023px) {
   .container {
-    width: 96%;
-    margin: 0 2%;
+    width: 100%;
+    margin: 0 0%;
   }
   .column3 {
     clear: both;
