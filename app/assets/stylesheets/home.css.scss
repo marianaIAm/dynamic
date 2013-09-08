@@ -136,10 +136,39 @@ div.profile {
 /******* Begin Devise ******/
 .sessions {
   width: 100%;
-  padding: 5% 0 100% 3%;
+  padding: 5% 5% 5% 5%;
   margin: auto;
   border: 1px solid black;
+  background-color: #34495e;
+  color: #fff;
+}
+
+.sessions h2 {
+  text-align: center;
+  padding-right: 15%;
+}
+
+form input[type='email'], form input[type='password'] {
+  width: 70%;
+  padding-left: 15%;
+  height: 38px;
+  margin-bottom: 10px;
+  border: 0px solid;
+  background:url(/assets/email.png) left no-repeat;
+  background-color:#FFFFFF;
+  color:#3D3D3D;
+  font: 1.8em 'trebuchet ms',helvetica,sans-serif;
+}
+
+form input[type='submit'] {
   background-color: #2ecc71;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  width: 85%;
+  margin-top: 10px;
+  border: 0px solid;
+  color: #34495e;
+  font: 1.8em 'trebuchet ms',helvetica,sans-serif;
 }
 
 .flat_form {
@@ -173,10 +202,30 @@ footer .copyright {
     }
   }
 
-  .client_box {
-    /*border-left: 1px solid #CCC;
-    border-right: 1px solid #CCC;*/
-    /*border-bottom: 2px solid #e74c3c;*/
+  .sessions {
+    width: 60%;
+    padding: 5% 5% 5% 5%;
+  }
+
+  .sessions h2 {
+    text-align: left;
+  }
+
+  form input[type='email'], form input[type='password'] {
+    width: 85%;
+    padding-left: 15%;
+    height: 38px;
+    margin-bottom: 10px;
+    font: 1.4em 'trebuchet ms',helvetica,sans-serif;
+  }
+
+  form input[type='submit'] {
+    background-color: #2ecc71;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+    margin-top: 10px;
+    font: 1.4em 'trebuchet ms',helvetica,sans-serif;
   }
 
   .column3, .client_list {
@@ -227,6 +276,32 @@ footer .copyright {
   .copy {
     float: right;
     width: 56%;
+  }
+
+  .sessions {
+    width: 60%;
+    padding: 5% 5% 5% 5%;
+  }
+
+  .sessions h2 {
+    text-align: left;
+  }
+
+  form input[type='email'], form input[type='password'] {
+    width: 85%;
+    padding-left: 15%;
+    height: 38px;
+    margin-bottom: 10px;
+    font: 1.4em 'trebuchet ms',helvetica,sans-serif;
+  }
+
+  form input[type='submit'] {
+    background-color: #2ecc71;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+    margin-top: 10px;
+    font: 1.4em 'trebuchet ms',helvetica,sans-serif;
   }
 
   footer .copyright {
