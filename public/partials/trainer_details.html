@@ -4,7 +4,7 @@
     <a ng-click="setClient(client.id, $index)">
     <div class="client_toggle clearfix">
         <div class="profile">
-          <img  class="profile_image" src="https://s3.amazonaws.com/dynamic-build/avatar_female.png" alt="avatar" />
+          <img  class="profile_image" ng-src={{client.avatar}} alt="avatar" />
         </div>
         <div class="profile_details">
           <p>{{client.name_first}} {{client.name_last}}</p>
@@ -17,7 +17,7 @@
 <div ng-show="currentClient" class="current_client">
   <div class="client_profile clearfix">
     <div class="profile">
-      <img  class="profile_image" src="https://s3.amazonaws.com/dynamic-build/avatar_female.png" alt="avatar" />
+      <img  class="profile_image" ng-src={{currentClient.avatar}} alt="avatar" />
     </div>
     <div class="profile_details">
       <p>{{currentClient.name_first}} {{currentClient.name_last}}</p>
@@ -29,7 +29,7 @@
       <div class="workout_toggle">{{workout.title}}</div>
     </a>
     <div ng-show="showHideWorkout">
-      <p>{{workout.description}}</p>
+      <!-- <p>{{workout.description}}</p> -->
       <div ng-repeat="exercise in workout.exercises">
         <div class="column3 clearfix">
           <div class="exercise_image"><img ng-src={{exercise.media}} alt={{exercise.title}} /></div>
