@@ -1,17 +1,19 @@
 <a ng-click="showHideClients=!showHideClients"><div class="list_button">Client List</div></a>
-<div ng-hide="showHideClients">
+<div ng-hide="showHideClients" class="clearfix">
   <div ng-repeat="client in clients">
-    <a ng-click="setClient(client.id, $index)">
-      <div class="client_toggle clearfix">
-        <div class="profile">
-          <img  class="profile_image" ng-src={{client.avatar}} alt="avatar" />
+    <div class="column3 clearfix">
+      <a ng-click="setClient(client.id, $index)">
+        <div class="client_toggle clearfix">
+          <div class="profile">
+            <img  class="profile_image_small" ng-src={{client.avatar}} alt="avatar" />
+          </div>
+          <div class="profile_details">
+            <p>{{client.name_first}} {{client.name_last}}</p>
+            <p>{{client.phone}}</p>
+          </div>
         </div>
-        <div class="profile_details">
-          <p>{{client.name_first}} {{client.name_last}}</p>
-          <p>{{client.phone}}</p>
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </div>
 

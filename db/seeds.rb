@@ -56,7 +56,12 @@ clients = [
   Client.create(name_last: "Firstanopolis", name_first: "Samantha", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
   Client.create(name_last: "Jones", name_first: "Jack", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png"),
   Client.create(name_last: "Smith", name_first: "Roberta", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
-  Client.create(name_last: "James", name_first: "Edward", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png")
+  Client.create(name_last: "James", name_first: "Edward", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png"),
+  Client.create(name_last: "Firstanopolis", name_first: "Jasmine", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
+  Client.create(name_last: "Jones", name_first: "Henry", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png"),
+  Client.create(name_last: "Smith", name_first: "Maria", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
+  Client.create(name_last: "James", name_first: "Eric", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png")
+
 ]
 
 
