@@ -6,16 +6,21 @@
    clear: both;
 }
 /***** Mobile First - default is phone ***/
-
 body {
   font-size: 12px;
-  font-family: Helvetica, sans-serif;
+  font-family: m-1c, Verdana;
   margin: 0px;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.profile_image {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
 }
 
 .container {
@@ -28,7 +33,7 @@ img {
   border-bottom: 1px solid #CCC;
 }
 
-.image, .copy {
+.exercise_image, .copy {
   text-align: center;
 }
 
@@ -38,7 +43,6 @@ img {
 }
 
 #content {
-  /*padding-left: 15px;*/
   margin-bottom: 10px;
   min-height: 300px;
   border-bottom: 2px solid #2980b9;
@@ -55,6 +59,7 @@ header {
 #logo {
   color: #2980b9;
   font-size: 2.2em;
+  font-family: marvel, pontano-sans;
   line-height: 2.6em;
   float: left;
   width: 65%;
@@ -73,7 +78,7 @@ a:link, a:visited {
 }
 
 .workout_toggle, .client_toggle, .client_profile {
-  font: 1.4em Verdana;
+  font: 1.4em m-1c;
   padding: 3% 0 3% 3%;
   color: #fff;
   background-color: #2ecc71;
@@ -84,38 +89,31 @@ p {
   padding-left: 3%;
 }
 
-.client_details {
-  width: 50%;
-  float: left;
-}
-
-.client_details p {
-  padding-left: 25%;
-}
-
 .client_profile {
   background-color: #fff;
   color: #2ecc71;
 }
 
-/*.current_client {
-  border: 2px solid #3498db;
-}
-*/
-.list_button {
-  padding: 2% 2% 2% 2%;
-  background-color: #c0392b;
-  color: #fff;
+.profile_details {
+  width: 72%;
+  float: left;
 }
 
-.circle {
-  width: 100px;
-  height: 100px;
-  background: #3498db;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-  margin-bottom: 10px;
+.profile_details p {
+  /*padding-left: 25%;*/
+  text-align: center;
+}
+
+div.profile {
+  width: 25%;
+  float: left;
+}
+
+.list_button {
+  font-size: 2.0em;
+  padding: 2% 2% 2% 3%;
+  background-color: #e74c3c;
+  color: #fff;
 }
 
 footer .madein {
@@ -147,7 +145,7 @@ footer .copyright {
     float: left;
     margin: 0 10px;
   }
-  .image {
+  .exercise_image {
     text-align: center;
   }
 }
@@ -168,7 +166,7 @@ footer .copyright {
       width: 100%;
     }
   }
-  .image {
+  .exercise_image {
     float: left;
     width: 40%;
   }

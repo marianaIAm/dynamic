@@ -2,18 +2,24 @@
 <div ng-hide="showHideClients">
   <div ng-repeat="client in clients">
     <a ng-click="setClient(client.id, $index)">
-    <div class="client_toggle">
-      <div class="circle clearfix"></div>
-      {{client.name_first}} {{client.name_last}}
-    </div>
+    <div class="client_toggle clearfix">
+        <div class="profile">
+          <img  class="profile_image" src="https://s3.amazonaws.com/dynamic-build/avatar_female.png" alt="avatar" />
+        </div>
+        <div class="profile_details">
+          <p>{{client.name_first}} {{client.name_last}}</p>
+          <p>{{client.phone}}</p>
+        </div>
     </a>
   </div>
 </div>
 
 <div ng-show="currentClient" class="current_client">
   <div class="client_profile clearfix">
-    <div class="circle client_details"></div>
-    <div class="client_details">
+    <div class="profile">
+      <img  class="profile_image" src="https://s3.amazonaws.com/dynamic-build/avatar_female.png" alt="avatar" />
+    </div>
+    <div class="profile_details">
       <p>{{currentClient.name_first}} {{currentClient.name_last}}</p>
       <p>{{currentClient.phone}}</p>
     </div>
@@ -26,7 +32,7 @@
       <p>{{workout.description}}</p>
       <div ng-repeat="exercise in workout.exercises">
         <div class="column3 clearfix">
-          <div class="image"><img ng-src={{exercise.media}} alt={{exercise.title}} /></div>
+          <div class="exercise_image"><img ng-src={{exercise.media}} alt={{exercise.title}} /></div>
           <div class="copy">
             <h3>{{exercise.title}}</h3>
             <p>{{exercise.description}}</p>

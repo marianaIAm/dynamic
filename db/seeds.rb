@@ -83,11 +83,16 @@ programs = [
 
 Exercise.destroy_all
 exercises = [
-  Exercise.create(title: "Pushup Plank", description: "Basic pushup starting position", media: "https://s3.amazonaws.com/dynamic-build/pushup.jpg"),
-  Exercise.create(title: "Squat", description: "Basic squat", media: "https://s3.amazonaws.com/dynamic-build/pushup.jpg"),
-  Exercise.create(title: "Row", description: "Basic row", media: "https://s3.amazonaws.com/dynamic-build/pushup.jpg"),
-  Exercise.create(title: "Plank", description: "Basic plank", media: "https://s3.amazonaws.com/dynamic-build/pushup.jpg"),
-  Exercise.create(title: "Bridge", description: "Basic bridge", media: "https://s3.amazonaws.com/dynamic-build/pushup.jpg")
+  Exercise.create(title: "Draw-In", description: "Draw-in with neutral spine", media: "https://s3.amazonaws.com/dynamic-build/floor_begin.png"),
+  Exercise.create(title: "Floor Bridge", description: "Raise hips and hold", media: "https://s3.amazonaws.com/dynamic-build/floor_bridge_end.png"),
+  Exercise.create(title: "Lunge", description: "Basic lunge", media: "https://s3.amazonaws.com/dynamic-build/lunge_end.png"),
+  Exercise.create(title: "Plank", description: "Basic plank", media: "https://s3.amazonaws.com/dynamic-build/plank.png"),
+  Exercise.create(title: "Straight-Arm Plank", description: "Straight-arm plank", media: "https://s3.amazonaws.com/dynamic-build/pushup_begin.png"),
+  Exercise.create(title: "Push-Up", description: "Push-up with core", media: "https://s3.amazonaws.com/dynamic-build/pushup_end.png"),
+  Exercise.create(title: "Side Lunge", description: "Side lunge", media: "https://s3.amazonaws.com/dynamic-build/side_lunge_end.png"),
+  Exercise.create(title: "Single-Leg Balance", description: "Single-leg balance", media: "https://s3.amazonaws.com/dynamic-build/single_leg_begin.png"),
+  Exercise.create(title: "Dynamic Warrior", description: "Dynamic warrior aka Single-leg reach", media: "https://s3.amazonaws.com/dynamic-build/single_leg_end.png"),
+  Exercise.create(title: "Single-Leg Squat", description: "Single-leg squat", media: "https://s3.amazonaws.com/dynamic-build/single_leg_squat_end.png")
 ]
 
 Routine.destroy_all
@@ -95,12 +100,38 @@ routines = [
   Routine.create(workout_id: workouts[0].id, exercise_id: exercises[0].id),
   Routine.create(workout_id: workouts[0].id, exercise_id: exercises[1].id),
   Routine.create(workout_id: workouts[0].id, exercise_id: exercises[2].id),
+  Routine.create(workout_id: workouts[0].id, exercise_id: exercises[3].id),
+  Routine.create(workout_id: workouts[0].id, exercise_id: exercises[4].id),
+  Routine.create(workout_id: workouts[0].id, exercise_id: exercises[5].id),
+  Routine.create(workout_id: workouts[0].id, exercise_id: exercises[6].id),
+  Routine.create(workout_id: workouts[0].id, exercise_id: exercises[7].id),
+  Routine.create(workout_id: workouts[0].id, exercise_id: exercises[8].id),
+  Routine.create(workout_id: workouts[0].id, exercise_id: exercises[9].id),
   Routine.create(workout_id: workouts[1].id, exercise_id: exercises[3].id),
-  Routine.create(workout_id: workouts[1].id, exercise_id: exercises[4].id),
+  Routine.create(workout_id: workouts[1].id, exercise_id: exercises[8].id),
+  Routine.create(workout_id: workouts[1].id, exercise_id: exercises[1].id),
+  Routine.create(workout_id: workouts[1].id, exercise_id: exercises[0].id),
+  Routine.create(workout_id: workouts[1].id, exercise_id: exercises[5].id),
+  Routine.create(workout_id: workouts[1].id, exercise_id: exercises[6].id),
   Routine.create(workout_id: workouts[2].id, exercise_id: exercises[0].id),
   Routine.create(workout_id: workouts[2].id, exercise_id: exercises[3].id),
-  Routine.create(workout_id: workouts[3].id, exercise_id: exercises[4].id),
-  Routine.create(workout_id: workouts[4].id, exercise_id: exercises[1].id)
+  Routine.create(workout_id: workouts[2].id, exercise_id: exercises[2].id),
+  Routine.create(workout_id: workouts[2].id, exercise_id: exercises[5].id),
+  Routine.create(workout_id: workouts[2].id, exercise_id: exercises[6].id),
+  Routine.create(workout_id: workouts[2].id, exercise_id: exercises[4].id),
+  Routine.create(workout_id: workouts[3].id, exercise_id: exercises[5].id),
+  Routine.create(workout_id: workouts[3].id, exercise_id: exercises[6].id),
+  Routine.create(workout_id: workouts[3].id, exercise_id: exercises[7].id),
+  Routine.create(workout_id: workouts[3].id, exercise_id: exercises[8].id),
+  Routine.create(workout_id: workouts[3].id, exercise_id: exercises[9].id),
+  Routine.create(workout_id: workouts[3].id, exercise_id: exercises[3].id),
+  Routine.create(workout_id: workouts[4].id, exercise_id: exercises[5].id),
+  Routine.create(workout_id: workouts[4].id, exercise_id: exercises[6].id),
+  Routine.create(workout_id: workouts[4].id, exercise_id: exercises[7].id),
+  Routine.create(workout_id: workouts[4].id, exercise_id: exercises[8].id),
+  Routine.create(workout_id: workouts[4].id, exercise_id: exercises[9].id),
+  Routine.create(workout_id: workouts[4].id, exercise_id: exercises[3].id)
+
 ]
 
 
