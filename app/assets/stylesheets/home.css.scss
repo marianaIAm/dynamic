@@ -39,7 +39,8 @@ img {
 
 #wrapper {
   width: 100%;
-  min-width: 150px;
+  max-width: 900px;
+  margin: auto;
 }
 
 #content {
@@ -52,8 +53,7 @@ header {
   background-color: #fff;
   height: 100%;
   padding-top: 5px;
-  border-bottom: 2px solid #2980b9;
-  padding-left: 15px;
+  padding-left: 3%;
 }
 
 #logo {
@@ -100,7 +100,6 @@ p {
 }
 
 .profile_details p {
-  /*padding-left: 25%;*/
   text-align: center;
 }
 
