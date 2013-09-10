@@ -3,7 +3,7 @@ angular.module('dynamicBuild', ['clientServices'])
 
 function clientRouter ($routeProvider) {
   $routeProvider
-    .when('/clients', {templateUrl: 'partials/client_details.html',
+    .when('/clients/:clientId', {templateUrl: 'partials/client_details.html',
       controller: 'ClientsCtrl'})
     .when('/trainers', {templateUrl: 'partials/trainer_details.html',
       controller: 'TrainersCtrl'})
