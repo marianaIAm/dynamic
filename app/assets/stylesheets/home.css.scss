@@ -8,11 +8,11 @@ $light-grey: #ccc;
 $light-blue: #5ac8fa;
 
 .clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 /***** Mobile First - default is phone ***/
@@ -58,7 +58,7 @@ img {
 
 #wrapper {
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
 }
 
@@ -157,21 +157,20 @@ div.profile {
 }
 
 form input[type='email'], form input[type='password'] {
-  width: 74%;
-  padding-left: 11%;
+  width: 85%;
+  padding-left: 1%;
   height: 38px;
   margin-bottom: 10px;
   border: 0px solid;
-  background: url("https://s3.amazonaws.com/dynamic-build/email.png") left no-repeat;
   font-size: 1.6em;
   background-color: $white;
   color: $midnight;
 }
 
 form input[type='submit'] {
+  width: 86%;
   padding-top: 2%;
   padding-bottom: 2%;
-  width: 85%;
   margin-top: 10px;
   border: 0px solid;
   font-size: 1.8em;
@@ -200,6 +199,7 @@ footer .copyright {
 }
 
 /***** BEGIN MEDIA QUERIES *****/
+
 /* large desktop and tv's */
 @media (min-width: 1024px) {
   .container {
@@ -218,8 +218,8 @@ footer .copyright {
   }
 
   form input[type='email'], form input[type='password'] {
-    width: 92%;
-    padding-left: 8%;
+    width: 99%;
+    padding-left: 1%;
     height: 38px;
     margin-bottom: 10px;
     font: 1.4em;
@@ -283,8 +283,8 @@ footer .copyright {
   }
 
   form input[type='email'], form input[type='password'] {
-    width: 89%;
-    padding-left: 11%;
+    width: 99%;
+    padding-left: 1%;
     height: 38px;
     margin-bottom: 10px;
     font: 1.4em;
