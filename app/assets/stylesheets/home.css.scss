@@ -133,7 +133,7 @@ div.profile {
   color: #fff;
 }
 
-/******* Begin Devise ******/
+/******* Begin Login ******/
 .sessions {
   width: 100%;
   padding: 5% 5% 5% 5%;
@@ -149,8 +149,8 @@ div.profile {
 }
 
 form input[type='email'], form input[type='password'] {
-  width: 70%;
-  padding-left: 15%;
+  width: 74%;
+  padding-left: 11%;
   height: 38px;
   margin-bottom: 10px;
   border: 0px solid;
@@ -175,7 +175,7 @@ form input[type='submit'] {
   font-family: Palatino;
 }
 
-/******* End Devise ******/
+/******* End Login ******/
 
 footer .madein {
   float: left;
@@ -202,6 +202,8 @@ footer .copyright {
     }
   }
 
+  /******* Begin Login ******/
+
   .sessions {
     width: 60%;
     padding: 5% 5% 5% 5%;
@@ -212,8 +214,8 @@ footer .copyright {
   }
 
   form input[type='email'], form input[type='password'] {
-    width: 85%;
-    padding-left: 15%;
+    width: 92%;
+    padding-left: 8%;
     height: 38px;
     margin-bottom: 10px;
     font: 1.4em 'trebuchet ms',helvetica,sans-serif;
@@ -227,6 +229,8 @@ footer .copyright {
     margin-top: 10px;
     font: 1.4em 'trebuchet ms',helvetica,sans-serif;
   }
+
+  /******* End Login ******/
 
   .column3, .client_list {
     width: 300px;
@@ -278,6 +282,8 @@ footer .copyright {
     width: 56%;
   }
 
+/******* Begin Login ******/
+
   .sessions {
     width: 60%;
     padding: 5% 5% 5% 5%;
@@ -288,8 +294,8 @@ footer .copyright {
   }
 
   form input[type='email'], form input[type='password'] {
-    width: 85%;
-    padding-left: 15%;
+    width: 89%;
+    padding-left: 11%;
     height: 38px;
     margin-bottom: 10px;
     font: 1.4em 'trebuchet ms',helvetica,sans-serif;
@@ -303,6 +309,8 @@ footer .copyright {
     margin-top: 10px;
     font: 1.4em 'trebuchet ms',helvetica,sans-serif;
   }
+
+  /******* End Login ******/
 
   footer .copyright {
    float: left;
