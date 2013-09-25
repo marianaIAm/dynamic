@@ -1,9 +1,9 @@
 function AppCtrl ($scope) {
-  $scope.setActive = function (type) {
-    $scope.clientsActive = '';
-    $scope.trainersActive = '';
-    $scope.exercisesActive = '';
+  // $scope.setActive = function (type) {
+  //   $scope.clientsActive = '';
+  //   $scope.trainersActive = '';
+  //   $scope.exercisesActive = '';
 
-    $scope[type + 'Active'] = 'active';
-  }
+  //   $scope[type + 'Active'] = 'active';
+  // }
 }

@@ -2,13 +2,17 @@ function TrainersCtrl ($scope, $routeParams, Client) {
 
   $scope.clients = Client.query();
 
-  $scope.setActive('trainers');
-
   $scope.currentClient = null;
 
-  $scope.setClient = function (id) {
-   $scope.currentClient = Client.get({clientId: id});
-   $scope.currentWorkout = null;
+  $scope.toggleClientList = function(id) {
+    $scope.showHideClients = !$scope.showHideClients;
+    $scope.currentClient = null;
+  }
+
+  $scope.setCurrentClient = function (id) {
+    $scope.showHideClients=!$scope.showHideClients;
+    $scope.currentClient = Client.get({clientId: id});
+    $scope.currentWorkout = null;
   };
 
   $scope.setCurrentClientWorkout = function (id) {

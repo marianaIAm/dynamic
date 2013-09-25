@@ -7,6 +7,4 @@ function clientRouter ($routeProvider) {
       controller: 'ClientsCtrl'})
     .when('/trainers', {templateUrl: 'partials/trainer_details.html',
       controller: 'TrainersCtrl'})
-    .when('/exercises', {template: '<h3>Exercises</h3> {{clients | json}}',
-      controller: 'ExercisesCtrl'});
 }
