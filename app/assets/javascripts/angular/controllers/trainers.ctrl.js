@@ -1,6 +1,7 @@
 function TrainersCtrl ($scope, $routeParams, Client, Trainer) {
 
-  $scope.trainer = Trainer.get({trainerId: 9});
+  var idParam = $routeParams.trainerId;
+  $scope.trainer = Trainer.get({trainerId: idParam});
   $scope.clients = Client.query();
   
   $scope.currentClient = null;
