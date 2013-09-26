@@ -12,11 +12,15 @@
   </div>
 
   <div id="client_bar" class="clearfix">
-    <div ng-show="showHideClientAccess" id="client_list_button"><a ng-click="toggleClientList()"><div class="list_button">Client List</div></a></div>
-    <div ng-hide="showHideClientAccess" id="client_search"><input type="text" ng-model="search" value="" placeholder="Search Clients" class="input-xlarge" /></div>
+    <div ng-show="showHideClientAccess" id="client_list_button">
+      <a ng-click="toggleClientList()"><div class="list_button">Client List</div></a>
+    </div>
+    <div ng-hide="showHideClientAccess" id="client_search">
+      <input type="text" ng-model="search" value="" placeholder="Search Clients" class="input-xlarge" />
+    </div>
   </div>
-
 </div>
+<div class="clearfix"></div>
 <div ng-hide="showHideClients" class="client_box clearfix">
   <div ng-repeat="client in clients | filter: search">
     <div class="client_list clearfix">
