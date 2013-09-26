@@ -33,7 +33,7 @@ header {
   background-color: $white;
   height: 100%;
   padding-top: 2%;
-  padding-left: 3%;
+  padding-left: 0;
 }
 
 #logo {
@@ -42,6 +42,7 @@ header {
   font-size: 2.2em;
   float: left;
   width: 55%;
+  padding-left: 3%;
 }
 
 h3 {
@@ -63,6 +64,7 @@ nav {
 nav li .dash_button {
   padding-left: 50%;
   padding-right: 50%;
+  text-align: center;
 }
 
 nav li {
@@ -204,6 +206,7 @@ a:link, a:visited {
 
 .profile_details p {
   text-align: left;
+  font-size: .9em;
 }
 
 div.profile {
@@ -336,7 +339,7 @@ footer .madein, footer .copyright {
   }
 
   #logo {
-    width: 53%;
+    width: 50%;
   }
 
   #client_bar {
