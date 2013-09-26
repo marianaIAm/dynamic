@@ -16,15 +16,16 @@
   <div id="wrapper">
   <header class="clearfix">
     <a href="/"><h1 id="logo">Dynamic Build</h1></a>
-    <div id="login">
+
+    <div id="login" class="clearfix">
         <nav class="clearfix">  
           <ul>  
-            <li><a href="/" class="dash_button">Home</a></li>    
+            <li><a href="/" class="dash_button">Home&nbsp;&nbsp;</a></li>    
             <% if account_signed_in? %>
               <li><a href="#/trainers/1" class="dash_button">Profile</a></li>    
-              <li><%= link_to "Logout", destroy_account_session_path, method: :delete, :class => "dash_button" %></li>  
+              <li class="list_log"><%= link_to "Logout", destroy_account_session_path, method: :delete, :class => "dash_button" %></li>  
             <% else %>
-              <li><%= link_to "Login", new_account_session_path, :class => "dash_button" %></li>
+              <li class="list_log"><%= link_to "Login", new_account_session_path, :class => "dash_button" %></li>
             <% end %>    
           </ul>  
         </nav> 
