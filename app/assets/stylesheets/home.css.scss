@@ -1,4 +1,5 @@
 $green: #4cd964;
+$light-green: #66F37E;
 $blue: #007aff;
 $yellow: #ffcc00;
 $pink: #ff2d55;
@@ -139,6 +140,11 @@ a:link, a:visited {
   color: $white;
 }
 
+.profile_details a:link, .profile_details a:visited {
+  text-decoration: none;
+  color: $midnight;
+}
+
 .workout_toggle, .client_toggle {
   background-color: $green;
   color: $white;
@@ -146,9 +152,15 @@ a:link, a:visited {
   padding: 2% 0 2% 3%;
 }
 
+
+
 .client_toggle {
   background-color: $green;
   color: $white;
+}
+
+.client_toggle:hover, .workout_toggle:hover {
+  background-color: $light-green;
 }
 
 .workout_toggle {
@@ -219,6 +231,10 @@ div.profile {
   font-size: 1.0em;
   padding: 11px 10%;
   text-align: center;
+}
+
+.list_button:hover {
+  background-color: $light-blue;
 }
 
 /******* Begin Login ******/
