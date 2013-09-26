@@ -19,7 +19,7 @@
     <div id="login" class="clearfix">
         <nav class="clearfix">  
           <ul>  
-            <li><a href="/" class="dash_button">Home&nbsp;&nbsp;</a></li>    
+            <li><a href="/" class="dash_button">&nbsp;Home&nbsp;</a></li>    
             <% if account_signed_in? %>
               <li><a href="#/trainers/1" class="dash_button">Profile</a></li>    
               <li class="list_log"><%= link_to "Logout", destroy_account_session_path, method: :delete, :class => "dash_button" %></li>  

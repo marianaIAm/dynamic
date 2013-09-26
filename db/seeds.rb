@@ -18,12 +18,12 @@ accounts = Account.create([
     password: "bellatrainer"
   },
   {
-    email: "lucy@trainer.com",
-    password: "lucytrainer"
+    email: "jake@trainer.com",
+    password: "jaketrainer"
   },
   {
-    email: "annie@trainer.com",
-    password: "annietrainer"
+    email: "ben@trainer.com",
+    password: "bentrainer"
   },
   {
     email: "samantha@client.com",
@@ -45,22 +45,22 @@ accounts = Account.create([
 
 Trainer.destroy_all
 trainers = [
-  Trainer.create(name_last: "Trainer", name_first: "Gabby", phone: "310-111-1111", account_id: accounts[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
-  Trainer.create(name_last: "Trainer", name_first: "Bella", phone: "310-222-2222", account_id: accounts[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
-  Trainer.create(name_last: "Trainer", name_first: "Lucy", phone: "310-333-3333", account_id: accounts[2].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
-  Trainer.create(name_last: "Trainer", name_first: "Annie", phone: "310-444-4444", account_id: accounts[3].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19))
+  Trainer.create(name_last: "Trainer", name_first: "Gabby", phone: "310-111-1111", account_id: accounts[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female_brunette_3.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
+  Trainer.create(name_last: "Trainer", name_first: "Bella", phone: "310-222-2222", account_id: accounts[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female_brunette_2.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
+  Trainer.create(name_last: "Trainer", name_first: "Jake", phone: "310-333-3333", account_id: accounts[2].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male_blonde_1.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
+  Trainer.create(name_last: "Trainer", name_first: "Ben", phone: "310-444-4444", account_id: accounts[3].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male_brunette_4.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19))
 ]
 
 Client.destroy_all
 clients = [
-  Client.create(name_last: "Firstanopolis", name_first: "Samantha", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
-  Client.create(name_last: "Jones", name_first: "Jack", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png"),
-  Client.create(name_last: "Smith", name_first: "Roberta", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
-  Client.create(name_last: "James", name_first: "Edward", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png"),
-  Client.create(name_last: "Firstanopolis", name_first: "Jasmine", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
-  Client.create(name_last: "Jones", name_first: "Henry", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png"),
-  Client.create(name_last: "Smith", name_first: "Maria", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png"),
-  Client.create(name_last: "James", name_first: "Eric", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male.png")
+  Client.create(name_last: "Firstanopolis", name_first: "Samantha", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female_brunette_1.png"),
+  Client.create(name_last: "Jones", name_first: "Jack", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male_brunette_1.png"),
+  Client.create(name_last: "Smith", name_first: "Roberta", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female_red_1_.png"),
+  Client.create(name_last: "James", name_first: "Edward", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male_brunette_2.png"),
+  Client.create(name_last: "Firstanopolis", name_first: "Jasmine", phone: "310-111-1111", account_id: accounts[4].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female_blond_1.png"),
+  Client.create(name_last: "Jones", name_first: "Henry", phone: "310-222-2222", account_id: accounts[5].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male_brunette_3.png"),
+  Client.create(name_last: "Smith", name_first: "Maria", phone: "310-333-3333", account_id: accounts[6].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female_brunette_4.png"),
+  Client.create(name_last: "James", name_first: "Eric", phone: "310-444-4444", account_id: accounts[7].id, trainer_id: trainers[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_male_brunette_5.png")
 
 ]
 
