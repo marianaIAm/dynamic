@@ -43,6 +43,10 @@ header {
   width: 55%;
 }
 
+h3 {
+  color: $blue;
+}
+
 #login {
   float: left;
   width: 42%;
@@ -53,12 +57,6 @@ header {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.profile_image, .profile_image_small {
-  -webkit-border-radius: 50em;
-  -moz-border-radius: 50em;
-  border-radius: 50em;
 }
 
 .container {
@@ -84,6 +82,10 @@ img {
   box-sizing: border-box;
 }
 
+.current_client {
+  border-top: 1px solid $blue;
+}
+
 .exercise_image, .copy {
   text-align: center;
 }
@@ -98,7 +100,7 @@ a:link, a:visited {
   color: $midnight;
 }
 
-.workout_toggle, .client_toggle, .client_profile {
+.workout_toggle, .client_toggle {
   background-color: $green;
   color: $white;
   font: 1.4em m-1c;
@@ -114,34 +116,70 @@ a:link, a:visited {
   border-top: 2px solid $blue;
 }
 
-p {
-  padding-left: 3%;
+.profile_image {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
 }
 
-.client_profile {
-  background-color: $white;
-  color: $midnight;
-}
-
-.profile_details {
-  width: 75%;
+.profile_details{
+  width: 68%;
+  padding-left: 7%;
   float: left;
 }
 
-.profile_details p {
+.card_profile_details {
+  width: 75%;
+  padding-left: 0;
+  float: left;
+}
+
+.card_profile_details p{
   text-align: center;
 }
 
+.profile_details p {
+  text-align: left;
+}
+
 div.profile {
+  text-align: center;
   width: 25%;
   float: left;
 }
 
+#client_bar {
+  width: 94%;
+  margin: 3% 3%;
+}
+
+#client_search {
+  float: right;
+  width: 70%;
+}
+
+.input-xlarge {
+  width: 97%;
+  padding-left: 3%;
+  height: 25px;
+  font-size: 1.2em;
+  background-color: $white;
+  color: $midnight;
+}
+
+#client_list_button {
+  float: right;
+  width: 70%;
+  /*padding-right: 5%;*/
+}
+
 .list_button {
+  width: 80%;
   background-color: $blue;
   color: $white;
-  font-size: 2.0em;
-  padding: 2% 2% 2% 3%;
+  font-size: 1.0em;
+  padding: 11px 10%;
+  text-align: center;
 }
 
 /******* Begin Login ******/
@@ -200,7 +238,7 @@ footer .madein, footer .copyright {
 @media (min-width: 1024px) {
 
   .container {
-    width: 960px;
+    width: 990px;
     margin: 0 auto;
   }
 
@@ -211,6 +249,11 @@ footer .madein, footer .copyright {
   #login {
     width: 45%;
     padding: 2% 0 0 0;
+  }
+
+  #client_bar {
+    width: 100%;
+    margin: 3% 0;
   }
 
   /******* Begin Login ******/
@@ -263,7 +306,7 @@ footer .madein, footer .copyright {
 }
 
 /* tablet */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 680px) and (max-width: 1023px) {
   .column3 {
     padding: 1% 0;
   }

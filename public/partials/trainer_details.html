@@ -1,13 +1,31 @@
-<a ng-click="toggleClientList()"><div class="list_button">Client List</div></a>
+<div class="trainer_profile">
+  <div class="clearfix">
+    <div class="profile">
+      <img  class="profile_image" ng-src={{trainer.avatar}} alt="avatar" />
+    </div>
+    <div class="profile_details">
+      <h3>Welcome {{trainer.name_first}} {{trainer.name_last}}</h3>
+      <p>Phone: {{trainer.phone}}</p>
+      <p>{{trainer.certification}}</p>
+      <p>Certificate Expires: {{trainer.certification_expiration}} </p>
+    </div>
+  </div>
+
+  <div id="client_bar" class="clearfix">
+    <div ng-show="showHideClientAccess" id="client_list_button"><a ng-click="toggleClientList()"><div class="list_button">Client List</div></a></div>
+    <div ng-hide="showHideClientAccess" id="client_search"><input type="text" ng-model="search" value="" placeholder="Search Clients" class="input-xlarge" /></div>
+  </div>
+
+</div>
 <div ng-hide="showHideClients" class="client_box clearfix">
-  <div ng-repeat="client in clients">
+  <div ng-repeat="client in clients | filter: search">
     <div class="client_list clearfix">
       <a ng-click="setCurrentClient(client.id, $index)">
         <div class="client_toggle clearfix">
           <div class="profile">
-            <img class="profile_image_small" ng-src={{client.avatar}} alt="avatar" />
+            <img class="profile_image" ng-src={{client.avatar}} alt="avatar" />
           </div>
-          <div class="profile_details">
+          <div class="card_profile_details">
             <p>{{client.name_first}} {{client.name_last}}</p>
             <p>{{client.phone}}</p>
           </div>
@@ -17,32 +35,4 @@
   </div>
 </div>
 
-<div ng-show="currentClient" class="current_client">
-  <div class="client_profile clearfix">
-    <div class="profile">
-      <img  class="profile_image" ng-src={{currentClient.avatar}} alt="avatar" />
-    </div>
-    <div class="profile_details">
-      <p>{{currentClient.name_first}} {{currentClient.name_last}}</p>
-      <p>{{currentClient.phone}}</p>
-    </div>
-  </div>
-  <div ng-repeat="workout in currentClient.workouts" class="clearfix">
-    <a ng-click="showHideWorkout=!showHideWorkout">
-      <div class="workout_toggle">{{workout.title}}</div>
-    </a>
-    <div ng-show="showHideWorkout">
-      <!-- <p>{{workout.description}}</p> -->
-      <div ng-repeat="exercise in workout.exercises">
-        <div class="column3 clearfix">
-          <div class="exercise_image"><img ng-src={{exercise.media}} alt={{exercise.title}} /></div>
-          <div class="copy">
-            <h3>{{exercise.title}}</h3>
-            <p>{{exercise.description}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  <!-- <div ng-hide="showHideWorkout"></div> -->
-  </div>
-</div>
+<div ng-include="'/partials/client_details.html'"></div>

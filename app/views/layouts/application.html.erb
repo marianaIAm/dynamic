@@ -18,7 +18,7 @@
     <h1 id="logo">Dynamic Build</h1>
     <div id="login">
       <% if account_signed_in? %>
-        Welcome <strong><%= current_account.email %></strong><br />
+        <!-- Welcome <strong><%#= current_account.email %></strong><br /> -->
         <%= link_to "Logout", destroy_account_session_path, method: :delete %>
       <% else %>
         <%= link_to "Login", new_account_session_path %>

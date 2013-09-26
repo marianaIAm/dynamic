@@ -45,10 +45,10 @@ accounts = Account.create([
 
 Trainer.destroy_all
 trainers = [
-  Trainer.create(name_last: "Doggy", name_first: "Gabby", phone: "310-111-1111", account_id: accounts[0].id),
-  Trainer.create(name_last: "Doggy", name_first: "Bella", phone: "310-222-2222", account_id: accounts[1].id),
-  Trainer.create(name_last: "Doggy", name_first: "Lucy", phone: "310-333-3333", account_id: accounts[2].id),
-  Trainer.create(name_last: "Doggy", name_first: "Annie", phone: "310-444-4444", account_id: accounts[3].id)
+  Trainer.create(name_last: "Doggy", name_first: "Gabby", phone: "310-111-1111", account_id: accounts[0].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
+  Trainer.create(name_last: "Doggy", name_first: "Bella", phone: "310-222-2222", account_id: accounts[1].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
+  Trainer.create(name_last: "Doggy", name_first: "Lucy", phone: "310-333-3333", account_id: accounts[2].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19)),
+  Trainer.create(name_last: "Doggy", name_first: "Annie", phone: "310-444-4444", account_id: accounts[3].id, avatar: "https://s3.amazonaws.com/dynamic-build/avatar_female.png", certification: "NASM Certified Personal Trainer", certification_expiration: Date.new(2014,12,19))
 ]
 
 Client.destroy_all

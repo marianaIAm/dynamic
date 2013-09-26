@@ -1,4 +1,4 @@
-angular.module('dynamicBuild', ['clientServices'])
+angular.module('dynamicBuild', ['clientServices', 'trainerServices'])
   .config(clientRouter);
 
 function clientRouter ($routeProvider) {
