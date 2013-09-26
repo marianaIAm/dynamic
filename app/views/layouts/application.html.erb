@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html ng-app="dynamicBuild">
+
 <head>
   <title>Dynamic Build</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
   <%= csrf_meta_tags %>
   <script>var __adobewebfontsappname__ = "code"</script>
-<script>var __adobewebfontsappname__ = "code"</script>
-<script src="http://use.edgefonts.net/m-1c:n8,n7,n9,n3,n5,n4,n2:all;marvel:i4,n7,n4,i7:all;pontano-sans:n4:all.js"></script>
+  <script>var __adobewebfontsappname__ = "code"</script>
+  <script src="http://use.edgefonts.net/m-1c:n8,n7,n9,n3,n5,n4,n2:all;marvel:i4,n7,n4,i7:all;pontano-sans:n4:all.js">
+  </script>
 </head>
+
 <body>
   <div id="wrapper">
   <header class="clearfix">
     <h1 id="logo">Dynamic Build</h1>
     <div id="login">
       <% if account_signed_in? %>
-        Welcome <strong><%= current_account.email %></strong>.
+        Welcome <strong><%= current_account.email %></strong><br />
         <%= link_to "Logout", destroy_account_session_path, method: :delete %>
       <% else %>
         <%= link_to "Login", new_account_session_path %>
       <% end %>
-
+    </div>
+  </header>
+   <div id="content" class="clearfix">
+    <div id="alert">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, id: "flash_#{name}" %>
       <% end %>
     </div>
-  </header>
-   <div id="content" class="clearfix">
 
 <%= yield %>
 

@@ -17,9 +17,37 @@ $light-blue: #5ac8fa;
 
 /***** Mobile First - default is phone ***/
 body {
-  font-size: 12px;
+  font-size: .9em;
   font-family: m-1c, Verdana;
-  margin: 0px;
+  margin: 0;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+header {
+  background-color: $white;
+  height: 100%;
+  padding-top: 2%;
+  padding-left: 3%;
+}
+
+#logo {
+  color: $blue;
+  font-family: pontano-sans;
+  font-size: 2.2em;
+  float: left;
+  width: 55%;
+}
+
+#login {
+  float: left;
+  width: 42%;
+  text-align: right;
+  padding: 2% 3% 0 0;
 }
 
 img {
@@ -36,6 +64,10 @@ img {
 .container {
   width: 100%;
   margin: 0 0;
+}
+
+#alert {
+  padding-left: 3%;
 }
 
 .column3 {
@@ -56,38 +88,9 @@ img {
   text-align: center;
 }
 
-#wrapper {
-  width: 100%;
-  max-width: 960px;
-  margin: auto;
-}
-
 #content {
   margin-bottom: 10px;
   min-height: 300px;
-}
-
-header {
-  background-color: $white;
-  height: 100%;
-  padding-top: 5px;
-  padding-left: 3%;
-}
-
-#logo {
-  color: $blue;
-  font-size: 2.2em;
-  font-family: pontano-sans;
-  line-height: 2.6em;
-  float: left;
-  width: 65%;
-}
-
-#login {
-  float: left;
-  width: 30%;
-  text-align: right;
-  padding-right: 5%;
 }
 
 a:link, a:visited {
@@ -104,7 +107,7 @@ a:link, a:visited {
 
 .client_toggle {
   background-color: $green;
-  color: $midnight;
+  color: $white;
 }
 
 .workout_toggle {
@@ -184,14 +187,7 @@ form input[type='submit'] {
 
 /******* End Login ******/
 
-footer .madein {
-  float: left;
-  width: 100%;
-  padding-left: 3%;
-  color: $blue;
-}
-
-footer .copyright {
+footer .madein, footer .copyright {
   float: left;
   width: 100%;
   padding-left: 3%;
@@ -202,9 +198,19 @@ footer .copyright {
 
 /* large desktop and tv's */
 @media (min-width: 1024px) {
+
   .container {
     width: 960px;
     margin: 0 auto;
+  }
+
+  header {
+    padding-left: 0;
+  }
+
+  #login {
+    width: 45%;
+    padding: 2% 0 0 0;
   }
 
   /******* Begin Login ******/
@@ -249,6 +255,11 @@ footer .copyright {
   .exercise_image {
     text-align: center;
   }
+
+  footer .copyright, footer .madein {
+   float: left;
+   padding-left: 0;
+  }
 }
 
 /* tablet */
@@ -266,6 +277,7 @@ footer .copyright {
     float: left;
     width: 40%;
   }
+  
   .copy {
     float: right;
     width: 56%;
@@ -299,15 +311,5 @@ footer .copyright {
   }
 
   /******* End Login ******/
-
-  footer .copyright {
-   float: left;
-   padding-left: 3%;
-  }
-
-  footer .madein {
-    float: left;
-    padding-left: 3%;
-  }
 }
 
