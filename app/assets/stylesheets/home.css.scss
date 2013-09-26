@@ -49,9 +49,25 @@ h3 {
 
 #login {
   float: left;
-  width: 42%;
-  text-align: right;
-  padding: 2% 3% 0 0;
+  width: 100%;
+  text-align: left;
+}
+
+nav {
+  margin-left: 0px;
+  padding-top: 0px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: $light-blue;
 }
 
 img {
@@ -82,7 +98,7 @@ img {
     background-color: $blue;
     color: $white;
     font-size: 1.0em;
-    padding: 11px 10%;
+    padding: 11px 3%;
     text-align: center;
   }
   /******* End Dash *****/
@@ -120,7 +136,7 @@ img {
 
 a:link, a:visited {
   text-decoration: none;
-  color: $midnight;
+  color: $white;
 }
 
 .workout_toggle, .client_toggle {
@@ -260,6 +276,15 @@ footer .madein, footer .copyright {
 /* large desktop and tv's */
 @media (min-width: 1024px) {
 
+  nav {
+    float: left;
+    width: 100%;
+  }
+
+  nav li {
+    display: inline;
+  }
+
   .container {
     width: 990px;
     margin: 0 auto;
@@ -270,8 +295,13 @@ footer .madein, footer .copyright {
   }
 
   #login {
-    width: 45%;
-    padding: 2% 0 0 0;
+    width: 47%;
+    text-align: right;
+    padding: 0 0;
+  }
+
+  #logo {
+    width: 53%;
   }
 
   #client_bar {
@@ -298,7 +328,7 @@ footer .madein, footer .copyright {
     background-color: $blue;
     color: $white;
     font-size: 1.0em;
-    padding: 11px 10%;
+    padding: 11px 3%;
     text-align: center;
   }
   /******* End Dash *****/
@@ -355,6 +385,12 @@ footer .madein, footer .copyright {
 
 /* tablet */
 @media (min-width: 680px) and (max-width: 1023px) {
+
+  #login {
+    width: 42%;
+    text-align: right;
+  }
+
   .column3 {
     padding: 1% 0;
   }
