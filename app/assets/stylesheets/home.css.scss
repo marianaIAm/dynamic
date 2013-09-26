@@ -59,8 +59,14 @@ nav {
   padding-top: 0px;
 }
 
+nav li .dash_button {
+  padding-left: 50%;
+  padding-right: 50%;
+}
+
 nav li {
-  display: inline;
+  display: block;
+  margin-top: 22px;
 }
 
 nav li a {
@@ -69,6 +75,12 @@ nav li a {
 
 nav li a:hover {
   background-color: $light-blue;
+}
+
+nav ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0;
 }
 
 img {
@@ -299,7 +311,13 @@ footer .madein, footer .copyright {
 
   nav li {
     display: inline;
+    margin-top: 0;
   }
+
+  nav li .dash_button {
+    padding-left: 3%;
+    padding-right: 3%;
+  } 
 
   .container {
     width: 990px;
@@ -407,6 +425,21 @@ footer .madein, footer .copyright {
     text-align: right;
   }
 
+  nav {
+    float: left;
+    width: 100%;
+  }
+
+  nav li {
+    display: inline;
+    margin-top: 0;
+  }
+
+  nav li .dash_button {
+    padding-left: 3%;
+    padding-right: 3%;
+  } 
+  
   .column3 {
     padding: 1% 0;
   }
