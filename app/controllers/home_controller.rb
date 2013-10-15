@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
   require 'json'
-  def index
-    
 
+  def index
     @trainer = Trainer.select(:id).where(account_id: current_account).to_json
 
     if !@trainer.nil?
@@ -11,6 +10,5 @@ class HomeController < ApplicationController
         @trainer_id = @parsed_json[0]["id"]
       end
     end
-
   end
 end
