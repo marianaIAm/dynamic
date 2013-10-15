@@ -10,12 +10,6 @@ class TrainersController < ApplicationController
     end
   end
 
-  # def index
-  #   render json: Trainer.all
-  # end
-
-  # GET /trainers/:id
-  # GET /trainers/:id.json
   def show
     render json: Trainer.find(params[:id])
   end
