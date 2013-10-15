@@ -18,3 +18,4 @@ pickle-email-*.html
 database.yml
 /spec/features/trainer_login_view_clients_spec.rb
 /config/initializers/devise
+.DS_Store
